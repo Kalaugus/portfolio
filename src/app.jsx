@@ -1,8 +1,10 @@
 import React from 'react'
 import { Route, BrowserRouter as Router, Routes }   from 'react-router-dom';
-//import {About, Contact, Home, Project} from './pages';
+//import { About, Contact, Home, Projects } from './pages';
+import pages from './pages';
 import Navbar from './components/Navbar';
 
+const { About, Contact, Home, Projects } = pages;
 
 
 const App= () => {
@@ -10,10 +12,10 @@ const App= () => {
         <Router>
             <Navbar/>            
             <Routes>
-                <Route path='/' element={'Home' } />
-                <Route path='/About' element={'About'} />
-                <Route path='/Projects' element={'Project'} />
-                <Route path='/Contact' element={'Contact'} />
+                <Route path='/' element={<Home />} />
+                <Route path='/About' element={<About />} />
+                <Route path='/Projects' element={<Projects />} />
+                <Route path='/Contact' element={<Contact />} />
             </Routes>
         </Router>
         </main>
