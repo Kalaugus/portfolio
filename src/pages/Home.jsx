@@ -2,10 +2,7 @@ import React from 'react'
 import { Canvas } from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Loader } from 'three';
-
-const trigger = () => { 
-  console.log('triggered')
-}
+import Island from '../models/Island';
 
 const Home = () => {
   return (
@@ -18,6 +15,7 @@ const Home = () => {
         <ambientLight/>
         <spotLight/>
         <hemisphereLight/>
+        <Island/>
        </Suspense>   
       
 
